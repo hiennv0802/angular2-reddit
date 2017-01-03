@@ -1,0 +1,30 @@
+<div class="col-md-6 wrap-content">
+  <div class="col-md-5 point-ui-static">
+    <div class="value">
+      {{ votes }}
+    </div>
+    <div class="label">
+      Points
+    </div>
+  </div>
+
+  <div class="col-md-7">
+    <div class="title-link">
+      <a href="{{ link }}">{{title}}</a>
+    </div>
+    <ul class="">
+      <li class="item">
+        <a href (click)="voteUp()">
+          <i class="glyphicon glyphicon-arrow-up"></i>
+          upvote
+        </a>
+      </li>
+      <li class="item">
+        <a href (click)="voteDown()">
+          <i class="glyphicon glyphicon-arrow-down"></i>
+          updown
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
