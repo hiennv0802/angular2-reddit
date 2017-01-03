@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Article } from './article.model'
 
 @Component({
   selector: 'app-article',
@@ -6,8 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
+  @Input() article: Article;
 
-  constructor() { }
+  constructor() {
+    this.article = new Article(
+      'Angular2',
+      'http://facebook.com',
+      10
+    );
+  }
+
+  voteUp(): boolean {
+    this.article.voteUp();
+    return false;
+  }
+
+  voteDown(): boolean {
+    this.article.voteDown();
+    return false;
+  }
 
   ngOnInit() {
   }
