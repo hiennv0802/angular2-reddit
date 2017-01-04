@@ -10,9 +10,9 @@
     <input type="text" name="link" class="form-control" #newlink>
   </div>
 
-  <button (click)="addArticle(newtitle, newlink)" class="btn btn-primary">Submit link</button>
+  <button (click)="addArticle(newtitle, newlink)" class="btn btn-success">Submit link</button>
 </form>
-
+<br>
 <div class="col-md-12 clearfix">
   <app-article *ngFor="let article of articles" [article]="article"></app-article>
 </div>
