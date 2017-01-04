@@ -1,7 +1,7 @@
 <div class="col-md-4 wrap-content">
   <div class="col-md-2 point-ui-static bg-primary">
     <div class="value">
-      {{ votes }}
+      {{ article.votes }}
     </div>
     <div class="label">
       Points
@@ -10,8 +10,9 @@
 
   <div class="col-md-3">
     <div class="title-link">
-      <a href="{{ link }}">{{title}}</a>
+      <a href="{{ article.link }}">{{article.title}}</a>
     </div>
+    <div class="meta">({{ article.domain() }})</div>
     <ul class="">
       <li class="item">
         <a href (click)="voteUp()">
